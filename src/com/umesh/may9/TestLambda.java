@@ -18,16 +18,14 @@ public class TestLambda {
     Playable t20 = () -> System.out.println(" play t20");
     t20.play();
 
-    Drinkable drinkable = (drink) ->System.out.println("drinking " + drink);
+    Drinkable drinkable = (drink) -> System.out.println("drinking " + drink);
     drinkable.drink("coke");
 
-    
     Drinkable drinkable1 = (name) -> {
       System.out.println(" this is multiline impl");
       System.out.println(" drinking " + name);
     };
     drinkable1.drink("fanta");
-
 
   }
 

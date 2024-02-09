@@ -1,20 +1,19 @@
 package com.umesh.may6;
 
+import java.math.BigInteger;
+
 public class FactorialNumber {
 
-
-
   public static void main(String[] args) {
-
-    System.out.println(findFactorialOfNumber(3));
+    System.out.println(findFactorialOfNumber(100));
   }
 
 
-  public static int findFactorialOfNumber(int number){
-    if(number == 0){
-      return 1;
+  public static BigInteger findFactorialOfNumber(long number){
+    if(number == 0 || number == 1){
+      return BigInteger.ONE;
     }else{
-      return number * findFactorialOfNumber(number -1);
+      return BigInteger.valueOf(number).multiply(findFactorialOfNumber(number -1));
     }
 
   }
